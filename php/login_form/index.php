@@ -13,11 +13,11 @@
 <body>
     <form action="login.php" method="POST">
         <label for="login">login</label>
-        <input type="text" id="login" name="login" value="">
+        <input type="text" id="login" name="login" value="" required>
         <label for="password">password</label>
-        <input type="password" id="password">
+        <input type="password" id="password" required>
         <label for="password-confirm">confirm password</label>
-        <input type="password" id="password-confirm">
+        <input type="password" id="password-confirm" required>
         <button type="submit">submit</button>
     </form>
 </body>
