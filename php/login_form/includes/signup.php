@@ -15,6 +15,7 @@
         <label for="login">login</label>
         <input type="text" id="login" name="login" value="" required>
         <label for="password">password</label>
+        <input type="email" id="email" name="email" required>
         <input type="password" id="password" name="password" required>
         <button type="submit">submit</button>
     </form>
