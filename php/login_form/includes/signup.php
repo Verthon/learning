@@ -1,23 +1,21 @@
 <?php
     include_once 'includes/connect.php';
 ?>
+<?php 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <form action="includes/login.php" method="POST">
-        <label for="login">login</label>
-        <input type="text" id="login" name="login" value="" required>
-        <label for="password">password</label>
-        <input type="email" id="email" name="email" required>
-        <input type="password" id="password" name="password" required>
-        <button type="submit">submit</button>
-    </form>
-</body>
-</html>
+if(isset($_POST['submit'])){
+  include_once 'database.sql';
+
+  $login = mysqli_real_escape_string($conn, $_POST['name']);
+  $password = mysqli_real_escape_string($conn, $_POST['password']);
+  $email = mysqli_real_escape_string($conn, $_POST['email']);
+
+  //error handlers
+  //check for empty fields 
+  if(empty($email) || empty($login) ||empty($password)){
+    header("Location: ../signup.php")
+  }
+}else{
+  header("Location: ../index.php");
+  exit();
+}

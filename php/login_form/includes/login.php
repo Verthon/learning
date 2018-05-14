@@ -1,12 +1,13 @@
-<?php 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>test</h1>
+</body>
+</html>
 
-if(isset($_POST['submit'])){
-  include_once 'database.sql';
-
-  $login = mysqli_real_escape_string($conn, $_POST['name']);
-  $password = mysqli_real_escape_string($conn, $_POST['password']);
-  $email = mysqli_real_escape_string($conn, $_POST['email']);
-}else{
-  header("Location: ../index.php");
-  exit();
-}
