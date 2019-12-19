@@ -1,4 +1,7 @@
 import { Component, Input } from '@angular/core';
+import { User } from '../../model/user.interface';
+
+import { } from 'ionic-angular'
 
 /**
  * Generated class for the SearchResultsComponent component.
@@ -8,15 +11,10 @@ import { Component, Input } from '@angular/core';
  */
 @Component({
   selector: 'search-results',
-  templateUrl: 'search-results.html'
+  templateUrl: 'search-results.component.html'
 })
 export class SearchResultsComponent {
 
-  text: string;
-
-  constructor() {
-    console.log('Hello SearchResultsComponent Component');
-    this.text = 'Hello World';
-  }
+  @Input() user: User
 
 }

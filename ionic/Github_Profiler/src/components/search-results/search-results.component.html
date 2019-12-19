@@ -1,0 +1,11 @@
+<ion-item *ngIf="user" text-wrap padding>
+  <ion-thumbnail item-left>
+    <img [src]="user.avatar_url" alt="User avatar">
+  </ion-thumbnail>
+  <h2>{{user.name}}</h2>
+  <p>{{user.company}}</p>
+</ion-item>
+<ion-item *ngIf="user" text-wrap padding>
+  <strong>{{user.location}}</strong>
+  <p text-wrap>{{user.bio}}</p>
+</ion-item>
