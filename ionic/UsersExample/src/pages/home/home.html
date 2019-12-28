@@ -12,4 +12,14 @@
 <ion-content padding>
   <h1>Navigate to create user POST</h1>
   <button ion-button color="primary" (click)="navToCreateUser()">Navigate</button>
+
+  <ion-list inset>
+    <ion-item *ngFor="let user of user">
+      <h2>{{user.name}}</h2>
+      <p>{{user.email}}</p>
+      <button (click)="deleteUser(user.name)">
+        <ion-icon name='trash' slot="icon-only"></ion-icon>
+      </button>
+    </ion-item>
+  </ion-list>
 </ion-content>

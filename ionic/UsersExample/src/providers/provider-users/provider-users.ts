@@ -21,4 +21,21 @@ export class ProviderUsersProvider {
     })
   }
 
+  addUser(data) {
+    return new Promise((resolve, reject) => {
+      this.http.post(this.baseUrl, JSON.stringify(data))
+        .subscribe(res => {
+          resolve(res);
+        }, (err) => {
+          reject(err);
+        });
+    });
+  }
+
+  deleteUser() {
+    return new Promise((resolve, reject) => {
+      this.http.delete(this.baseUrl).subscribe(data => resolve(data), err => reject(err))
+    })
+  }
+
 }
